@@ -1,0 +1,31 @@
+# JetBrains
+.idea/
+
+# CMake
+cmake-build-*/
+
+# Build
+[Bb]uild/
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+
+# Object files
+*.o
+*.obj
+
+# Executable files
+*.exe
+*.out
+
+# Shared object files
+*.so
+*.dll
+*.dylib
+
+# Dependency files
+*.d
+
+# Backup files
+*~
+*.bak
