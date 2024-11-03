@@ -4,6 +4,8 @@ project(saphy)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(CURSES_NEED_WIDE TRUE)
+
 find_package(Curses REQUIRED)
 include_directories(saphy ${CURSES_INCLUDE_DIRS})
 
