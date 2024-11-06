@@ -1,4 +1,4 @@
-#include "../include/window.hpp"
+#include "window.hpp"
 
 PrettyWindow::PrettyWindow(int row, int col, int height, int width)
     : _background(newwin(height, width, row, col), delete_window)
