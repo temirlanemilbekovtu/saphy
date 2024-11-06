@@ -19,7 +19,7 @@ private:
     static void delete_panel(PANEL *panel);
 
 public:
-    PrettyWindow(int row, int col, int height, int width);
+    PrettyWindow(int row, int col, int height, int width, std::string &label);
 
 
     void set_label(const std::string &label);

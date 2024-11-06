@@ -1,7 +1,7 @@
 #include "window.hpp"
 #include "constants.hpp"
 
-PrettyWindow::PrettyWindow(int row, int col, int height, int width)
+PrettyWindow::PrettyWindow(int row, int col, int height, int width, std::string &label)
     : _background(nullptr, delete_window)
     , _overlay(nullptr, delete_window)
     , _panel(nullptr, delete_panel) {
@@ -19,6 +19,7 @@ PrettyWindow::PrettyWindow(int row, int col, int height, int width)
     _panel.reset(new_panel(_background.get()));
 
     box(_background.get(), 0, 0);
+    set_label(label);
 
     update_panels();
     doupdate();
