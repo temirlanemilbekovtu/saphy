@@ -16,4 +16,4 @@ include_directories(saphy ${INCLUDE_DIRS} ${CURSES_INCLUDE_DIRS})
 
 add_executable(saphy ${SRC_FILES})
 
-target_link_libraries(saphy Curses)
+target_link_libraries(saphy ${CURSES_LIBRARIES} panel)
