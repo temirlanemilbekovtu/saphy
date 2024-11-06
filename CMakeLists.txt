@@ -12,7 +12,7 @@ set(INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/include)
 file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS ${SRC_FILES})
 
 find_package(Curses REQUIRED)
-include_directories(saphy ${INCLUDE_DIRS}, ${CURSES_INCLUDE_DIRS})
+include_directories(saphy ${INCLUDE_DIRS} ${CURSES_INCLUDE_DIRS})
 
 add_executable(saphy ${SRC_FILES})
 
