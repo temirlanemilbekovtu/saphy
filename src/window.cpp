@@ -35,3 +35,22 @@ void PrettyWindow::delete_panel(PANEL *panel) {
         del_panel(panel);
     }
 }
+
+void PrettyWindow::set_label(const std::string &label) {
+    _label = label;
+
+    int width = getmaxx(_background.get()) - LABEL_MARGIN;
+
+    std::string output_label = label;
+    if (output_label.length() > width) {
+        output_label.erase(width - ELLIPSIS.length());
+        output_label += ELLIPSIS;
+    }
+
+    mvwhline(_background.get(), LABEL_Y, LABEL_X, ACS_HLINE, width);
+    mvwprintw(_background.get(), LABEL_Y, LABEL_X, "%s", output_label.c_str());
+}
+
+const std::string &PrettyWindow::get_label() const {
+    return _label;
+}
